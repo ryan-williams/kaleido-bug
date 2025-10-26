@@ -93,20 +93,14 @@ jobs:
 
       - name: Install patched kaleido from fork
         run: |
-          # TODO: Update this URL once fork is created
-          # pip install git+https://github.com/ryan-williams/kaleido.git@axref-fix#subdirectory=src/py
-          echo "Patched kaleido installation will be added once fork is created"
-          echo "For now, this job will be skipped"
-          exit 0
+          pip install git+https://github.com/ryan-williams/Kaleido.git@axref-fix#subdirectory=src/py
 
       - name: Show versions
-        if: success()
         run: |
           python -c "import plotly; print(f'plotly: {plotly.__version__}')"
           python -c "import kaleido; print(f'kaleido: {getattr(kaleido, \"__version__\", \"unknown\")}')"
 
       - name: Run test (should pass with patched kaleido)
-        if: success()
         run: python kaleido_axref_repro.py
 
       - name: Upload output image
