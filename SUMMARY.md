@@ -72,7 +72,7 @@ python kaleido_axref_repro.py
 
 ```bash
 pip install plotly==6.3.1
-pip install git+https://github.com/YOUR_USERNAME/kaleido.git@axref-fix#subdirectory=src/py
+pip install git+https://github.com/ryan-williams/kaleido.git@axref-fix#subdirectory=src/py
 python kaleido_axref_repro.py
 # ✅ Success!
 ```
@@ -89,7 +89,7 @@ See **NEXT_STEPS.md** for detailed instructions on:
 
 ## Key Files to Update
 
-Before publishing, replace `YOUR_USERNAME` in:
+Before publishing, replace `ryan-williams` in:
 - README.md
 - .github/workflows/test.yml
 - requirements.txt
@@ -109,4 +109,4 @@ Before publishing, replace `YOUR_USERNAME` in:
 
 Investigation and fix: @runsascoded with Claude Code
 Reproduction: This repository
-Fix location: https://github.com/YOUR_USERNAME/kaleido/tree/axref-fix
+Fix location: https://github.com/ryan-williams/kaleido/tree/axref-fix

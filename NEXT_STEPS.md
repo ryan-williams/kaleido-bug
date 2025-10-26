@@ -48,7 +48,7 @@ The fix is already applied locally:
 
 # Then locally:
 cd /Users/ryan/c/kaleido
-git remote add YOUR_USERNAME https://github.com/YOUR_USERNAME/kaleido.git
+git remote add ryan-williams https://github.com/ryan-williams/kaleido.git
 ```
 
 ### Step 2: Push Fix Branch
@@ -89,7 +89,7 @@ Tested with:
 EOF
 
 # Push to your fork
-git push YOUR_USERNAME axref-fix
+git push ryan-williams axref-fix
 ```
 
 ### Step 3: Update Bug Report Repo URLs
@@ -97,7 +97,7 @@ git push YOUR_USERNAME axref-fix
 ```bash
 cd /Users/ryan/c/hccs/path/kaleido-bug
 
-# Replace YOUR_USERNAME with your GitHub username in:
+# Replace ryan-williams with your GitHub username in:
 # - README.md (multiple locations)
 # - .github/workflows/test.yml
 # - requirements.txt
@@ -111,7 +111,7 @@ cd /Users/ryan/c/hccs/path/kaleido-bug
 cd /Users/ryan/c/hccs/path/kaleido-bug
 
 # Create repo on GitHub first, then:
-git remote add origin https://github.com/YOUR_USERNAME/kaleido-axref-bug.git
+git remote add origin https://github.com/ryan-williams/kaleido-axref-bug.git
 
 # Review what will be committed
 git status
@@ -140,7 +140,7 @@ git push -u origin main
 
 ### Step 5: Verify GitHub Actions
 
-1. Go to https://github.com/YOUR_USERNAME/kaleido-axref-bug/actions
+1. Go to https://github.com/ryan-williams/kaleido-axref-bug/actions
 2. Verify workflows run automatically
 3. Check that tests demonstrate the bug and fix
 
@@ -172,7 +172,7 @@ File at: https://github.com/plotly/Kaleido/issues/new
 After issue is filed:
 
 1. Go to https://github.com/plotly/Kaleido/compare
-2. Select: `base: master` ← `compare: YOUR_USERNAME:axref-fix`
+2. Select: `base: master` ← `compare: ryan-williams:axref-fix`
 3. Create PR with:
    - Reference to issue number
    - Link to reproduction/test repo

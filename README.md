@@ -1,6 +1,6 @@
 # Kaleido `axref="x"` Bug Reproduction
 
-[![Test kaleido axref bug](https://github.com/YOUR_USERNAME/kaleido-axref-bug/actions/workflows/test.yml/badge.svg)](https://github.com/YOUR_USERNAME/kaleido-axref-bug/actions/workflows/test.yml)
+[![Test kaleido axref bug](https://github.com/ryan-williams/kaleido-axref-bug/actions/workflows/test.yml/badge.svg)](https://github.com/ryan-williams/kaleido-axref-bug/actions/workflows/test.yml)
 
 This repository demonstrates and provides a fix for a critical bug in kaleido when using plotly 6.x with `axref="x"` annotations.
 
@@ -77,7 +77,7 @@ This is what kaleido did for plotly < 1.30.0, and what it needs to do for plotly
 
 ```bash
 # Install patched kaleido from fork
-pip install git+https://github.com/YOUR_USERNAME/kaleido.git@axref-fix#subdirectory=src/py
+pip install git+https://github.com/ryan-williams/kaleido.git@axref-fix#subdirectory=src/py
 
 # Test with plotly 6.x
 pip install plotly==6.3.1
@@ -92,7 +92,7 @@ Expected output:
 
 ### GitHub Actions
 
-The workflow automatically tests all combinations. See [Actions](https://github.com/YOUR_USERNAME/kaleido-axref-bug/actions) for results.
+The workflow automatically tests all combinations. See [Actions](https://github.com/ryan-williams/kaleido-axref-bug/actions) for results.
 
 ## Files
 
@@ -131,7 +131,7 @@ fig.add_annotation(
 ### Option 3: Use the patched kaleido (RECOMMENDED)
 
 ```bash
-pip install git+https://github.com/YOUR_USERNAME/kaleido.git@axref-fix#subdirectory=src/py
+pip install git+https://github.com/ryan-williams/kaleido.git@axref-fix#subdirectory=src/py
 ```
 
 ## Performance Impact

@@ -7,7 +7,7 @@ This document explains how to fork kaleido, apply the patch, and publish it for 
 If you just want to use the patched version:
 
 ```bash
-pip install git+https://github.com/YOUR_USERNAME/kaleido.git@axref-fix#subdirectory=src/py
+pip install git+https://github.com/ryan-williams/kaleido.git@axref-fix#subdirectory=src/py
 ```
 
 ## Creating the Fork and Patch
@@ -15,7 +15,7 @@ pip install git+https://github.com/YOUR_USERNAME/kaleido.git@axref-fix#subdirect
 ### 1. Fork Kaleido
 
 ```bash
-# Fork plotly/Kaleido on GitHub to YOUR_USERNAME/kaleido
+# Fork plotly/Kaleido on GitHub to ryan-williams/kaleido
 # Then clone your fork
 cd /Users/ryan/c/kaleido  # Or wherever you want to work
 
@@ -76,7 +76,7 @@ git push origin axref-fix
 ```bash
 # In a test environment
 pip uninstall -y kaleido
-pip install git+https://github.com/YOUR_USERNAME/kaleido.git@axref-fix#subdirectory=src/py
+pip install git+https://github.com/ryan-williams/kaleido.git@axref-fix#subdirectory=src/py
 
 # Test it
 cd /Users/ryan/c/hccs/path/kaleido-bug
@@ -150,7 +150,7 @@ Once the fork is pushed, update `.github/workflows/test.yml`:
 ```yaml
 - name: Install patched kaleido from fork
   run: |
-    pip install git+https://github.com/YOUR_USERNAME/kaleido.git@axref-fix#subdirectory=src/py
+    pip install git+https://github.com/ryan-williams/kaleido.git@axref-fix#subdirectory=src/py
 ```
 
 And update `README.md` with the correct fork URL.

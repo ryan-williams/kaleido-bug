@@ -15,8 +15,8 @@ This documents the steps to create a GitHub fork and branch with the fix.
 ```bash
 cd /Users/ryan/c/kaleido
 
-# Add your fork as a remote (replace YOUR_USERNAME)
-git remote add rw https://github.com/YOUR_USERNAME/kaleido.git
+# Add your fork as a remote (replace ryan-williams)
+git remote add rw https://github.com/ryan-williams/kaleido.git
 
 # Verify
 git remote -v
@@ -56,7 +56,7 @@ Tested with:
 - plotly 6.3.1 + kaleido 1.x (original): ❌ Fails (demonstrates bug)
 - plotly 6.3.1 + kaleido 1.x (patched): ✅ Works (fix verified)
 
-Reproduction: https://github.com/YOUR_USERNAME/kaleido-axref-bug
+Reproduction: https://github.com/ryan-williams/kaleido-axref-bug
 "
 
 # Push to your fork
@@ -68,12 +68,12 @@ git push rw axref-fix
 Once the fork branch is pushed, update these files in `/Users/ryan/c/hccs/path/kaleido-bug`:
 
 **README.md:**
-- Replace `YOUR_USERNAME` with actual GitHub username
+- Replace `ryan-williams` with actual GitHub username
 - Update badge URL
 - Update fork installation command
 
 **.github/workflows/test.yml:**
-- Replace `YOUR_USERNAME` in the patched kaleido installation URL
+- Replace `ryan-williams` in the patched kaleido installation URL
 
 **requirements.txt:**
 - Update the fork URL
@@ -87,7 +87,7 @@ source /tmp/test-kaleido-fork/bin/activate
 
 # Install from fork
 pip install pandas plotly==6.3.1
-pip install git+https://github.com/YOUR_USERNAME/kaleido.git@axref-fix#subdirectory=src/py
+pip install git+https://github.com/ryan-williams/kaleido.git@axref-fix#subdirectory=src/py
 
 # Test
 cd /Users/ryan/c/hccs/path/kaleido-bug
@@ -121,7 +121,7 @@ Includes:
 "
 
 # Create repo on GitHub, then:
-git remote add origin https://github.com/YOUR_USERNAME/kaleido-axref-bug.git
+git remote add origin https://github.com/ryan-williams/kaleido-axref-bug.git
 git push -u origin main
 ```
 
@@ -143,7 +143,7 @@ KaleidoError: Error 525: Cannot read properties of undefined (reading 'val')
 
 ## Reproduction
 
-Full reproduction with test matrix: https://github.com/YOUR_USERNAME/kaleido-axref-bug
+Full reproduction with test matrix: https://github.com/ryan-williams/kaleido-axref-bug
 
 Minimal example:
 \`\`\`python
@@ -180,14 +180,14 @@ Plotly 6.x changed figure serialization. Kaleido's `toImage()` shortcut (used fo
 
 Always use `newPlot()` + `toImage()` for full axis initialization.
 
-Patched version: https://github.com/YOUR_USERNAME/kaleido/tree/axref-fix
+Patched version: https://github.com/ryan-williams/kaleido/tree/axref-fix
 
-Fix confirmed working: https://github.com/YOUR_USERNAME/kaleido-axref-bug/actions
+Fix confirmed working: https://github.com/ryan-williams/kaleido-axref-bug/actions
 
 ## Installation
 
 \`\`\`bash
-pip install git+https://github.com/YOUR_USERNAME/kaleido.git@axref-fix#subdirectory=src/py
+pip install git+https://github.com/ryan-williams/kaleido.git@axref-fix#subdirectory=src/py
 \`\`\`
 ```
 

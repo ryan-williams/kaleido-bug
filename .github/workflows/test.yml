@@ -94,7 +94,7 @@ jobs:
       - name: Install patched kaleido from fork
         run: |
           # TODO: Update this URL once fork is created
-          # pip install git+https://github.com/YOUR_USERNAME/kaleido.git@axref-fix#subdirectory=src/py
+          # pip install git+https://github.com/ryan-williams/kaleido.git@axref-fix#subdirectory=src/py
           echo "Patched kaleido installation will be added once fork is created"
           echo "For now, this job will be skipped"
           exit 0

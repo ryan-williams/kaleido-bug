@@ -7,4 +7,4 @@ kaleido>=0.2.0
 # pip install plotly==5.24.1 kaleido==0.2.1  # Works
 # pip install plotly==6.3.1 kaleido==0.2.1   # Fails
 # pip install plotly==6.3.1 kaleido>=1.0.0   # Fails
-# pip install plotly==6.3.1 git+https://github.com/YOUR_USERNAME/kaleido.git@axref-fix#subdirectory=src/py  # Fixed
+# pip install plotly==6.3.1 git+https://github.com/ryan-williams/kaleido.git@axref-fix#subdirectory=src/py  # Fixed
