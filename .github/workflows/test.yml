@@ -114,13 +114,13 @@ jobs:
           name: output-plotly-6.3.1-kaleido-patched
           path: tmp/*.png
 
-  summary:
-    name: Test Summary
+  results:
+    name: Results
     runs-on: ubuntu-latest
     needs: [test-combinations, test-patched]
     if: always()
     steps:
-      - name: Summary
+      - name: Generate summary
         run: |
           echo "## Test Results" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
@@ -129,8 +129,14 @@ jobs:
           echo "- ✅ plotly 5.24.1 + kaleido 0.2.1: Works" >> $GITHUB_STEP_SUMMARY
           echo "- ❌ plotly 6.3.1 + kaleido 0.2.1: Fails with 'Cannot read properties of undefined (reading val)'" >> $GITHUB_STEP_SUMMARY
           echo "- ❌ plotly 6.3.1 + kaleido 1.x: Fails with same error" >> $GITHUB_STEP_SUMMARY
-          echo "- ✅ plotly 6.3.1 + **patched kaleido**: **Works!** (fix verified)" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ plotly 6.3.1 + [**patched kaleido**](https://github.com/ryan-williams/Kaleido/tree/axref-fix): **Works!** (fix verified)" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "The issue is that plotly 6.x changed figure serialization, breaking axref='x' annotations with kaleido." >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "**The fix works!** Install patched version: \`pip install git+https://github.com/ryan-williams/Kaleido.git@axref-fix#subdirectory=src/py\`" >> $GITHUB_STEP_SUMMARY
+          echo "### The fix works! 🎉" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Install patched version from [ryan-williams/Kaleido@axref-fix](https://github.com/ryan-williams/Kaleido/tree/axref-fix):" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "\`\`\`bash" >> $GITHUB_STEP_SUMMARY
+          echo "pip install git+https://github.com/ryan-williams/Kaleido.git@axref-fix#subdirectory=src/py" >> $GITHUB_STEP_SUMMARY
+          echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
