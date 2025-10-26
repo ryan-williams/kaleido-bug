@@ -1,13 +1,4 @@
-# Kaleido 1.0.0+ Regression: `axref="x"` Annotations Break
-
-## Summary
-
-Annotations using `axref="x"` (data coordinate system for arrow positioning) cause a `KaleidoError` when exporting to PNG in Kaleido 1.0.0+.
-
-**Works in:** Kaleido 0.2.1.post1
-**Broken in:** Kaleido 1.0.0, 1.1.0
-
-## Error Message
+Annotations using `axref="x"` raise `KaleidoError` when exporting to PNG in Kaleido ≥1.0.0:
 
 ```
 KaleidoError: Error 525: Cannot read properties of undefined (reading 'val')
