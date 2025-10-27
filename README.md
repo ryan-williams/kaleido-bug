@@ -54,13 +54,6 @@ pip install git+https://github.com/ryan-williams/Kaleido.git@axref-fix#subdirect
 - [`kaleido_axref_repro.py`](kaleido_axref_repro.py) - Minimal 20-line reproduction
 - [`test_notebook_axref.py`](test_notebook_axref.py) - Real-world example from production notebook
 - [`.github/workflows/test.yml`](.github/workflows/test.yml) - Automated test matrix
-- [`NEXT_STEPS.md`](NEXT_STEPS.md) - Guide for filing upstream issue
-- [`FORK_SETUP.md`](FORK_SETUP.md) - How to create kaleido fork
-- [`PATCHING_KALEIDO.md`](PATCHING_KALEIDO.md) - Technical patch details
-
-## Contributing
-
-To file an issue with plotly/Kaleido, see [`FORK_SETUP.md`](FORK_SETUP.md) for issue template and instructions.
 
 ---
 
