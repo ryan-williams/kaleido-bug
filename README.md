@@ -51,8 +51,7 @@ pip install git+https://github.com/ryan-williams/Kaleido.git@axref-fix#subdirect
 
 ## Files
 
-- [`kaleido_axref_repro.py`](kaleido_axref_repro.py) - Minimal 20-line reproduction
-- [`test_notebook_axref.py`](test_notebook_axref.py) - Real-world example from production notebook
+- [`kaleido_axref_repro.py`](kaleido_axref_repro.py) - Minimal reproduction script
 - [`.github/workflows/test.yml`](.github/workflows/test.yml) - Automated test matrix
 
 ---
